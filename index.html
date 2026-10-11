@@ -1,8 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#121314">
 <title>Scene LUT Studio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
 <style>
+[hidden]{display:none!important}
+html{padding-block:env(safe-area-inset-top,0px) 0}
+body{margin:0}
+
 /* Layout: a pocket grading bay. Phone: compact header, sticky viewer with before/after wipe, the active tool pane, and a camera-app tab bar fixed at the bottom. Desktop: viewer left, tools right. One dark, neutral theme on purpose: a tinted UI biases color judgement. */
 :root{
   --bg:#121314; --panel:#1a1b1d; --raise:#232427; --line:#2f3135; --fg:#ecebe8; --muted:#9d9c98; --dim:#6c6c69;
@@ -178,7 +188,8 @@ pre b{color:var(--fg);font-weight:500}
 }
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
-
+</head>
+<body>
 <div class="app">
   <header>
     <div class="brand">
@@ -902,3 +913,5 @@ const lastTab=store.get('sls-tab','looks');showTab(['looks','adjust','color','sc
 loadSample(0);
 })();
 </script>
+</body>
+</html>
